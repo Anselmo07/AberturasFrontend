@@ -93,6 +93,8 @@ export const Services = () => {
                   color: "#6B7280",
                   fontSize: "14px",
                   lineHeight: "1.7",
+                  maxWidth: "220px",
+                  margin: "0 auto",
                 }}
               >
                 {service.description}

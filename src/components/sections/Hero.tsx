@@ -1,4 +1,6 @@
-import heroImage from "../../assets/heroAberturas.jpg";
+import heroImage from "../../assets/p1.jpg";
+
+import { WHATSAPP_URL } from "../ui/buttonContact";
 
 export const Hero = () => {
   return (
@@ -83,7 +85,10 @@ export const Hero = () => {
               marginTop: "40px",
             }}
           >
-            <button
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noreferrer"
               style={{
                 background: "#C9A14A",
                 color: "#000",
@@ -95,9 +100,10 @@ export const Hero = () => {
               }}
             >
               Solicitar Presupuesto
-            </button>
+            </a>
 
-            <button
+            <a
+              href="#trabajos"
               style={{
                 background: "transparent",
                 color: "#fff",
@@ -109,7 +115,7 @@ export const Hero = () => {
               }}
             >
               Ver Trabajos
-            </button>
+            </a>
           </div>
         </div>
       </div>

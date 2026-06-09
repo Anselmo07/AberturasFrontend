@@ -1,5 +1,7 @@
 import { Container } from "./Container";
 
+import { WHATSAPP_URL } from "../ui/buttonContact";
+
 export const Navbar = () => {
   return (
     <header
@@ -94,7 +96,10 @@ export const Navbar = () => {
               
             }}
           >
-            <button
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noreferrer"
               className="btn-primary"
               style={{
                 border: "none",
@@ -104,7 +109,7 @@ export const Navbar = () => {
               }}
             >
               Presupuesto
-            </button>
+            </a>
           </div>
         </nav>
       </Container>

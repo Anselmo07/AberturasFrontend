@@ -1,0 +1,55 @@
+/* =========================
+   NAVBAR
+========================= */
+
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+  }
+}
+
+/* =========================
+   HERO
+========================= */
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 48px !important;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+@media (max-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* =========================
+   SERVICES
+========================= */
+
+@media (max-width: 1200px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-grid {
+    grid-template-columns: 1fr !important;
+  }
+}

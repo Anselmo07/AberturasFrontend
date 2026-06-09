@@ -1,4 +1,10 @@
-import aboutImage from "../../assets/heroAberturas.jpg";
+import aboutImage from "../../assets/about.jpg";
+
+import {
+  FaShieldAlt,
+  FaRulerCombined,
+  FaMedal,
+} from "react-icons/fa";
 
 export const About = () => {
   return (
@@ -90,6 +96,7 @@ export const About = () => {
                 gridTemplateColumns:
                   "repeat(3, minmax(0, 1fr))",
                 gap: "20px",
+                textAlign:"center",
               }}
             >
               <div
@@ -99,6 +106,18 @@ export const About = () => {
                   borderRadius: "20px",
                 }}
               >
+
+                <div
+                  style={{
+                    color: "#C9A14A",
+                    marginBottom: "14px",
+                    display: "flex",
+                    justifyContent: "center",
+                  }}
+                >
+                  <FaMedal size={28} />
+                </div>
+
                 <h3
                   style={{
                     color: "#111827",
@@ -127,6 +146,18 @@ export const About = () => {
                   borderRadius: "20px",
                 }}
               >
+
+                <div
+                  style={{
+                    color: "#C9A14A",
+                    marginBottom: "14px",
+                    display: "flex",
+                    justifyContent: "center",
+                  }}
+                >
+                  <FaRulerCombined size={28} />
+                </div>
+
                 <h3
                   style={{
                     color: "#111827",
@@ -155,6 +186,18 @@ export const About = () => {
                   borderRadius: "20px",
                 }}
               >
+
+                <div
+                  style={{
+                    color: "#C9A14A",
+                    marginBottom: "14px",
+                    display: "flex",
+                    justifyContent: "center",
+                  }}
+                >
+                  <FaShieldAlt size={28} />
+                </div>
+
                 <h3
                   style={{
                     color: "#111827",

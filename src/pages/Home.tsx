@@ -6,6 +6,9 @@ import { About } from "../components/sections/About";
 import { Projects } from "../components/sections/Projects";
 
 import { Footer } from "../components/layout/Footer";
+import { Benefits } from "../components/sections/Benefits";
+import { CTA } from "../components/sections/CTA";
+import { WhatsAppButton } from "../components/ui/whatsAppButton";
 
 export const Home = () => {
   return (
@@ -18,9 +21,15 @@ export const Home = () => {
 
       <About />
 
+      <Benefits />
+
       <Projects />
 
+      <CTA />
+
       <Footer />
+
+      <WhatsAppButton />
     </>
   );
 };
