@@ -51,6 +51,7 @@ export const Services = () => {
         {/* Productos */}
 
         <div
+          className="services-grid"
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(6, 1fr)",

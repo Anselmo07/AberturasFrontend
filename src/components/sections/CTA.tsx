@@ -5,7 +5,7 @@ export const CTA = () => {
     <section
       style={{
         background: "#111111",
-        padding: "120px 0",
+        padding: "100px 0",
       }}
     >
       <div
@@ -16,6 +16,7 @@ export const CTA = () => {
         }}
       >
         <div
+          className="cta-content"
           style={{
             textAlign: "center",
             maxWidth: "900px",
@@ -34,6 +35,7 @@ export const CTA = () => {
           </span>
 
           <h2
+          className="cta-title"
             style={{
               marginTop: "20px",
               color: "#fff",
@@ -46,6 +48,7 @@ export const CTA = () => {
           </h2>
 
           <p
+            className="cta-description"
             style={{
               marginTop: "24px",
               color: "#D1D5DB",
@@ -64,6 +67,7 @@ export const CTA = () => {
             }}
           >
             <a
+              className="cta-button"
               href={WHATSAPP_URL}
               target="_blank"
               rel="noreferrer"

@@ -32,6 +32,7 @@ export const Hero = () => {
         "
       >
         <div
+        className="hero-content"
           style={{
             marginLeft: "120px",
             maxWidth: "700px",
@@ -50,6 +51,7 @@ export const Hero = () => {
           </span>
 
           <h1
+            className="hero-title"
             style={{
               marginTop: "20px",
               fontSize: "84px",
@@ -66,6 +68,7 @@ export const Hero = () => {
           </h1>
 
           <p
+            className="hero-description"
             style={{
               marginTop: "30px",
               maxWidth: "560px",
@@ -79,6 +82,7 @@ export const Hero = () => {
           </p>
 
           <div
+            className="hero-buttons"
             style={{
               display: "flex",
               gap: "16px",

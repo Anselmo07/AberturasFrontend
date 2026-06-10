@@ -41,6 +41,7 @@ export const Projects = () => {
         {/* Header */}
 
         <div
+          className="projects-header"
           style={{
             display: "flex",
             justifyContent: "space-between",
@@ -62,6 +63,7 @@ export const Projects = () => {
             </span>
 
             <h2
+              className="projects-title"
               style={{
                 marginTop: "12px",
                 fontSize: "48px",
@@ -112,6 +114,7 @@ export const Projects = () => {
         {/* Grid */}
 
         <div
+          className="projects-grid"
           style={{
             display: "grid",
             gridTemplateColumns:
@@ -121,6 +124,7 @@ export const Projects = () => {
         >
           {visibleProjects.map((project, index) => (
             <div
+              className="project-card"
               key={index}
               style={{
                 position: "relative",

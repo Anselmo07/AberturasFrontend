@@ -22,8 +22,9 @@ export const Footer = () => {
       margin: "0 auto",
     }}
   >
-        <div
-      style={{
+      <div
+        className="footer-main"
+        style={{
         display: "flex",
         justifyContent: "center",
         gap: "120px",
@@ -156,6 +157,7 @@ export const Footer = () => {
         </div>
 
         <div
+          className="footer-copy"
           style={{
             marginTop: "30px",
             paddingTop: "20px",
@@ -167,6 +169,31 @@ export const Footer = () => {
         >
           © {new Date().getFullYear()} Aberturas de
           Aluminio. Todos los derechos reservados.
+        </div>
+
+        <div
+          className="footer-author"
+          style={{
+            marginTop: "20px",
+            paddingTop: "20px",
+            borderTop: "1px solid rgba(255,255,255,.05)",
+            textAlign: "center",
+            color: "#6B7280",
+            fontSize: "13px",
+          }}
+        >
+          Diseñado y desarrollado por{" "}
+          <a
+            href="https://www.anselmovecchio.com"
+            target="_blank"
+            rel="noreferrer"
+            style={{
+              color: "#C9A14A",
+              fontWeight: 600,
+            }}
+          >
+            Anselmo Vecchio
+          </a>
         </div>
       </div>
     </footer>

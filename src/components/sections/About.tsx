@@ -16,13 +16,15 @@ export const About = () => {
       }}
     >
       <div
-  style={{
-    width: "90%",
-    maxWidth: "1800px",
-    margin: "0 auto 0 auto",
-  }}
->
+        style={{
+          width: "90%",
+          maxWidth: "1800px",
+          margin: "0 auto 0 auto",
+        }}
+      >
+
         <div
+          className="about-grid"
           style={{
             display: "grid",
             gridTemplateColumns: "50% 45%",
@@ -36,6 +38,7 @@ export const About = () => {
             <img
               src={aboutImage}
               alt="Sobre nosotros"
+              className="about-image"
               style={{
                 width: "100%",
                 height: "450px",
@@ -61,6 +64,7 @@ export const About = () => {
             </span>
 
             <h2
+              className="about-title"
               style={{
                 marginTop: "14px",
                 marginBottom: "24px",
@@ -74,6 +78,7 @@ export const About = () => {
             </h2>
 
             <p
+              className="about-description"
               style={{
                 fontSize: "18px",
                 lineHeight: "1.9",
@@ -91,6 +96,7 @@ export const About = () => {
             {/* Beneficios */}
 
             <div
+              className="about-benefits"
               style={{
                 display: "grid",
                 gridTemplateColumns:

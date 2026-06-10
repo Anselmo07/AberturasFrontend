@@ -66,6 +66,7 @@ export const Benefits = () => {
           </span>
 
           <h2
+            className="benefits-title"
             style={{
               marginTop: "12px",
               fontSize: "48px",
@@ -78,6 +79,7 @@ export const Benefits = () => {
         </div>
 
         <div
+          className="benefits-grid"
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(4, 1fr)",
@@ -86,6 +88,7 @@ export const Benefits = () => {
         >
           {benefits.map((benefit) => (
             <div
+              className="benefit-card"
               key={benefit.title}
               style={{
                 background: "#fff",
