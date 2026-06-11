@@ -201,7 +201,13 @@
    BENEFITS
 ========================= */
 
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
+  .benefits-section {
+    display: none;
+  }
+}
+
+/* @media (max-width: 1200px) {
   .benefits-grid {
     grid-template-columns: repeat(2, 1fr) !important;
   }
@@ -230,7 +236,7 @@
   .benefit-card {
     padding: 24px !important;
   }
-}
+} */
 
 /* =========================
    PROJECTS

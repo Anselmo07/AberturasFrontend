@@ -35,6 +35,7 @@ const benefits = [
 export const Benefits = () => {
   return (
     <section
+      className="benefits-section"
       style={{
         background: "#FAF8F4",
         padding: "110px 0",

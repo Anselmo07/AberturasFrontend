@@ -58,7 +58,7 @@ export const Footer = () => {
                 Teléfono
               </span>
 
-              <p>+54 9 11 1234-5678</p>
+              <p>+54 9 3434 63-1968</p>
             </div>
           </div>
 
@@ -89,7 +89,7 @@ export const Footer = () => {
                 WhatsApp
               </span>
 
-              <p>+54 9 11 1234-5678</p>
+              <p>+54 9 3434 63-1968</p>
             </div>
           </div>
 
@@ -120,7 +120,7 @@ export const Footer = () => {
                 Ubicación
               </span>
 
-              <p>Tu ciudad, Argentina</p>
+              <p>Eatado De Israel 222, Parana</p>
             </div>
           </div>
 
