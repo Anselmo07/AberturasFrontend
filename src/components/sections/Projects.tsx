@@ -1,10 +1,10 @@
+import { Link } from "react-router-dom";
+
 import project1 from "../../assets/heroAberturas.jpg";
 import project2 from "../../assets/heroAberturas.jpg";
 import project3 from "../../assets/heroAberturas.jpg";
 import project4 from "../../assets/heroAberturas.jpg";
 import project5 from "../../assets/heroAberturas.jpg";
-
-import { useState } from "react";
 
 const projects = [
   project1,
@@ -17,11 +17,7 @@ const projects = [
 
 export const Projects = () => {
   
-  const [showAll, setShowAll] = useState(false);
-
-  const visibleProjects = showAll
-  ? projects
-  : projects.slice(0, 4);
+  const visibleProjects = projects.slice(0, 4);
 
   return (
     <section
@@ -77,38 +73,25 @@ export const Projects = () => {
             </h2>
           </div>
 
-          <button
-            onClick={() => setShowAll(!showAll)}
+          <Link
+            to="/proyectos"
             style={{
               background: "#C9A14A",
               color: "#111111",
-              border: "none",
               borderRadius: "12px",
               padding: "16px 30px",
               fontSize: "15px",
               fontWeight: 600,
-              cursor: "pointer",
-              transition: "all .3s ease",
+              textDecoration: "none",
+              display: "inline-flex",
+              alignItems: "center",
+              justifyContent: "center",
               boxShadow:
                 "0 10px 25px rgba(201,161,74,.25)",
             }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform =
-                "translateY(-2px)";
-              e.currentTarget.style.boxShadow =
-                "0 15px 35px rgba(201,161,74,.35)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform =
-                "translateY(0)";
-              e.currentTarget.style.boxShadow =
-                "0 10px 25px rgba(201,161,74,.25)";
-            }}
           >
-            {showAll
-              ? "Mostrar menos"
-              : "Ver todos los trabajos"}
-          </button>
+            Ver todos los trabajos
+          </Link>
         </div>
 
         {/* Grid */}

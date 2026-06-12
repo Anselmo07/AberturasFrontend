@@ -104,11 +104,11 @@ export const Navbar = () => {
               color: "white",
             }}
           >
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#nosotros">Nosotros</a></li>
-            <li><a href="#productos">Productos</a></li>
-            <li><a href="#trabajos">Trabajos</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="/#inicio">Inicio</a></li>
+            <li><a href="/#nosotros">Nosotros</a></li>
+            <li><a href="/#productos">Productos</a></li>
+            <li><a href="/#trabajos">Trabajos</a></li>
+            <li><a href="/#contacto">Contacto</a></li>
           </ul>
 
           <div
