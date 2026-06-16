@@ -2,9 +2,17 @@ import { useState } from "react";
 
 import { projects } from "../data/projectsPage";
 
+import { WHATSAPP_URL } from "../components/ui/buttonContact";
+
 export const ProjectsPage = () => {
   const [selectedCategory, setSelectedCategory] =
     useState("Todos");
+
+  const [selectedProject, setSelectedProject] =
+    useState<any>(null);
+
+  const [selectedImage, setSelectedImage] =
+    useState(0);
 
   const categories = [
     "Todos",
@@ -22,7 +30,7 @@ export const ProjectsPage = () => {
       : projects.filter(
           (project) =>
             project.category === selectedCategory
-        );    
+        );
 
   return (
     <main
@@ -102,7 +110,6 @@ export const ProjectsPage = () => {
                 border: "none",
                 cursor: "pointer",
                 fontWeight: 600,
-                transition: ".3s",
 
                 background:
                   selectedCategory === category
@@ -148,14 +155,15 @@ export const ProjectsPage = () => {
           {filteredProjects.map((project) => (
             <div
               key={project.id}
+              onClick={() => {
+                setSelectedProject(project);
+                setSelectedImage(0);
+              }}
               style={{
                 background: "#fff",
                 borderRadius: "24px",
                 overflow: "hidden",
                 cursor: "pointer",
-
-                transition: ".3s",
-
                 boxShadow:
                   "0 10px 30px rgba(0,0,0,.06)",
               }}
@@ -202,6 +210,171 @@ export const ProjectsPage = () => {
           ))}
         </div>
       </section>
+
+      {/* Modal */}
+
+      {selectedProject && (
+        <div
+          onClick={() =>
+            setSelectedProject(null)
+          }
+          style={{
+            position: "fixed",
+            inset: 0,
+            background:
+              "rgba(0,0,0,.75)",
+            zIndex: 9999,
+
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+
+            padding: "30px",
+          }}
+        >
+          <div
+            onClick={(e) =>
+              e.stopPropagation()
+            }
+            style={{
+              background: "#fff",
+              width: "100%",
+              maxWidth: "1300px",
+              borderRadius: "24px",
+              overflow: "hidden",
+
+              display: "grid",
+              gridTemplateColumns:
+                "1.1fr 0.9fr",
+            }}
+          >
+            {/* Galería */}
+
+            <div
+              style={{
+                padding: "30px",
+              }}
+            >
+              <img
+                src={
+                  selectedProject.images[
+                    selectedImage
+                  ]
+                }
+                alt=""
+                style={{
+                  width: "100%",
+                  height: "520px",
+                  objectFit: "cover",
+                  borderRadius: "16px",
+                }}
+              />
+
+              <div
+                style={{
+                  display: "flex",
+                  gap: "12px",
+                  marginTop: "16px",
+                  overflowX: "auto",
+                }}
+              >
+                {selectedProject.images.map(
+                  (
+                    image: string,
+                    index: number
+                  ) => (
+                    <img
+                      key={index}
+                      src={image}
+                      alt=""
+                      onClick={() =>
+                        setSelectedImage(
+                          index
+                        )
+                      }
+                      style={{
+                        width: "100px",
+                        height: "80px",
+                        objectFit: "cover",
+                        borderRadius: "10px",
+                        cursor: "pointer",
+                        border:
+                          selectedImage ===
+                          index
+                            ? "3px solid #C9A14A"
+                            : "2px solid transparent",
+                      }}
+                    />
+                  )
+                )}
+              </div>
+            </div>
+
+            {/* Información */}
+
+            <div
+              style={{
+                padding: "40px",
+                borderLeft:
+                  "1px solid #eee",
+              }}
+            >
+              <span
+                style={{
+                  color: "#C9A14A",
+                  fontWeight: 600,
+                  textTransform:
+                    "uppercase",
+                }}
+              >
+                {selectedProject.category}
+              </span>
+
+              <h2
+                style={{
+                  marginTop: "14px",
+                  fontSize: "42px",
+                  color: "#111827",
+                }}
+              >
+                {selectedProject.title}
+              </h2>
+
+              <p
+                style={{
+                  marginTop: "24px",
+                  color: "#6B7280",
+                  lineHeight: "1.9",
+                  fontSize: "17px",
+                }}
+              >
+                {
+                  selectedProject.description
+                }
+              </p>
+
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noreferrer"
+                style={{
+                  display: "inline-block",
+                  marginTop: "40px",
+                  background: "#C9A14A",
+                  color: "#111",
+                  padding:
+                    "18px 32px",
+                  borderRadius: "12px",
+                  fontWeight: 700,
+                  textDecoration: "none",
+                }}
+              >
+                Solicitar presupuesto
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
     </main>
   );
 };
