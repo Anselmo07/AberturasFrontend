@@ -1,44 +1,29 @@
-import project1 from "../assets/heroAberturas.jpg";
-import project2 from "../assets/heroAberturas.jpg";
-import project3 from "../assets/heroAberturas.jpg";
-import project4 from "../assets/heroAberturas.jpg";
-import project5 from "../assets/heroAberturas.jpg";
-import project6 from "../assets/heroAberturas.jpg";
+import { useState } from "react";
 
-const projects = [
-  {
-    image: project1,
-    title: "Quinchos",
-    category: "Quinchos",
-  },
-  {
-    image: project2,
-    title: "Mamparas",
-    category: "Mamparas",
-  },
-  {
-    image: project3,
-    title: "Roller",
-    category: "Roller",
-  },
-  {
-    image: project4,
-    title: "Puertas plegables",
-    category: "Puertas",
-  },
-  {
-    image: project5,
-    title: "Techos",
-    category: "Techos",
-  },
-  {
-    image: project6,
-    title: "Cielo raso PVC",
-    category: "PVC",
-  },
-];
+import { projects } from "../data/projectsPage";
 
 export const ProjectsPage = () => {
+  const [selectedCategory, setSelectedCategory] =
+    useState("Todos");
+
+  const categories = [
+    "Todos",
+    "Quinchos",
+    "Mamparas",
+    "Roller",
+    "Puertas",
+    "Techos",
+    "PVC",
+  ];
+
+  const filteredProjects =
+    selectedCategory === "Todos"
+      ? projects
+      : projects.filter(
+          (project) =>
+            project.category === selectedCategory
+        );    
+
   return (
     <main
       style={{
@@ -53,7 +38,7 @@ export const ProjectsPage = () => {
         style={{
           textAlign: "center",
           padding: "0 20px",
-          marginBottom: "80px",
+          marginBottom: "70px",
         }}
       >
         <span
@@ -93,6 +78,52 @@ export const ProjectsPage = () => {
           roller, techos, puertas plegables y
           cielorrasos PVC.
         </p>
+
+        {/* Filtros */}
+
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            gap: "12px",
+            flexWrap: "wrap",
+            marginTop: "40px",
+          }}
+        >
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() =>
+                setSelectedCategory(category)
+              }
+              style={{
+                padding: "12px 22px",
+                borderRadius: "12px",
+                border: "none",
+                cursor: "pointer",
+                fontWeight: 600,
+                transition: ".3s",
+
+                background:
+                  selectedCategory === category
+                    ? "#C9A14A"
+                    : "#ffffff",
+
+                color:
+                  selectedCategory === category
+                    ? "#111111"
+                    : "#6B7280",
+
+                boxShadow:
+                  selectedCategory === category
+                    ? "0 10px 25px rgba(201,161,74,.25)"
+                    : "0 5px 15px rgba(0,0,0,.05)",
+              }}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
       </section>
 
       {/* Grid */}
@@ -114,19 +145,23 @@ export const ProjectsPage = () => {
             gap: "30px",
           }}
         >
-          {projects.map((project, index) => (
+          {filteredProjects.map((project) => (
             <div
-              key={index}
+              key={project.id}
               style={{
                 background: "#fff",
                 borderRadius: "24px",
                 overflow: "hidden",
+                cursor: "pointer",
+
+                transition: ".3s",
+
                 boxShadow:
                   "0 10px 30px rgba(0,0,0,.06)",
               }}
             >
               <img
-                src={project.image}
+                src={project.images[0]}
                 alt={project.title}
                 style={{
                   width: "100%",
@@ -146,6 +181,7 @@ export const ProjectsPage = () => {
                     fontSize: "13px",
                     textTransform: "uppercase",
                     letterSpacing: "1px",
+                    fontWeight: 600,
                   }}
                 >
                   {project.category}
