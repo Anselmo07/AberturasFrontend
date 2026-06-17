@@ -62,6 +62,7 @@ export const ProjectsPage = () => {
         </span>
 
         <h1
+          className="projects-page-title"
           style={{
             marginTop: "16px",
             fontSize: "60px",
@@ -73,6 +74,7 @@ export const ProjectsPage = () => {
         </h1>
 
         <p
+          className="projects-page-description"
           style={{
             maxWidth: "700px",
             margin: "20px auto 0",
@@ -90,6 +92,7 @@ export const ProjectsPage = () => {
         {/* Filtros */}
 
         <div
+          className="projects-filters"
           style={{
             display: "flex",
             justifyContent: "center",
@@ -236,6 +239,7 @@ export const ProjectsPage = () => {
             onClick={(e) =>
               e.stopPropagation()
             }
+            className="project-modal"
             style={{
               background: "#fff",
               width: "100%",
@@ -262,6 +266,7 @@ export const ProjectsPage = () => {
                   ]
                 }
                 alt=""
+                className="project-modal-main-image"
                 style={{
                   width: "100%",
                   height: "520px",
@@ -292,6 +297,7 @@ export const ProjectsPage = () => {
                           index
                         )
                       }
+                      className="project-modal-gallery"
                       style={{
                         width: "100px",
                         height: "80px",
@@ -313,6 +319,7 @@ export const ProjectsPage = () => {
             {/* Información */}
 
             <div
+              className="project-modal-info"
               style={{
                 padding: "40px",
                 borderLeft:

@@ -1,6 +1,6 @@
 import p1 from "../assets/heroAberturas.jpg";
-import p2 from "../assets/heroAberturas.jpg";
-import p3 from "../assets/heroAberturas.jpg";
+import p2 from "../assets/cielorrasos.jpg";
+import p3 from "../assets/maparas.png";
 import p4 from "../assets/heroAberturas.jpg";
 
 export const projects = [

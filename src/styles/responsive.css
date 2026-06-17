@@ -338,3 +338,78 @@
     padding-inline: 20px;
   }
 }
+
+/* =========================
+   PROJECTS PAGE
+========================= */
+
+@media (max-width: 1200px) {
+  .projects-page-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .projects-page-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .projects-page-title {
+    font-size: 38px !important;
+    line-height: 1.15 !important;
+  }
+
+  .projects-page-description {
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+    padding: 0 10px;
+  }
+
+  .projects-filters {
+    gap: 8px !important;
+  }
+
+  .projects-filters button {
+    font-size: 14px;
+    padding: 10px 16px !important;
+  }
+
+  .project-modal {
+    display: block !important;
+
+    width: 95% !important;
+    max-width: 95% !important;
+
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .project-modal-main-image {
+  height: 250px !important;
+}
+
+.project-modal-gallery {
+  width: 70px !important;
+  height: 55px !important;
+}
+
+.project-modal-info h2 {
+  font-size: 32px !important;
+  line-height: 1.2;
+}
+
+  .project-modal-gallery {
+    width: 100% !important;
+  }
+
+  .project-modal-info {
+    border-left: none !important;
+    border-top: 1px solid #eee;
+
+    padding: 24px !important;
+
+  }
+  
+}
