@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import { projects } from "../data/projectsPage";
 
-import { WHATSAPP_URL } from "../components/ui/buttonContact";
+// import { WHATSAPP_URL } from "../components/ui/buttonContact";
 
 export const ProjectsPage = () => {
   const [selectedCategory, setSelectedCategory] =
@@ -31,6 +31,16 @@ export const ProjectsPage = () => {
           (project) =>
             project.category === selectedCategory
         );
+
+  const getWhatsappUrl = (project: any) => {
+  const message = `Hola, quiero solicitar presupuesto para:
+${project.title}
+${project.description}`;
+
+      return `https://wa.me/5493435442884?text=${encodeURIComponent(
+        message
+      )}`;
+    };  
 
   return (
     <main
@@ -361,7 +371,7 @@ export const ProjectsPage = () => {
               </p>
 
               <a
-                href={WHATSAPP_URL}
+                href={getWhatsappUrl(selectedProject)}
                 target="_blank"
                 rel="noreferrer"
                 style={{
