@@ -15,14 +15,13 @@ export const ProjectsPage = () => {
     useState(0);
 
   const categories = [
-    "Todos",
-    "Quinchos",
-    "Mamparas",
-    "Roller",
-    "Puertas",
-    "Techos",
-    "PVC",
-  ];
+  "Todos",
+  "Aberturas",
+  "Puertas",
+  "Cerramientos",
+  "Quinchos",
+  "Mamparas",
+];
 
   const filteredProjects =
     selectedCategory === "Todos"
