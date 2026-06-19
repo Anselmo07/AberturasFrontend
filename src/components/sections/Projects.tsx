@@ -1,23 +1,9 @@
 import { Link } from "react-router-dom";
 
-import project1 from "../../assets/heroAberturas.jpg";
-import project2 from "../../assets/heroAberturas.jpg";
-import project3 from "../../assets/heroAberturas.jpg";
-import project4 from "../../assets/heroAberturas.jpg";
-import project5 from "../../assets/heroAberturas.jpg";
-
-const projects = [
-  project1,
-  project2,
-  project3,
-  project4,
-  project5
-];
-
+import { projects } from "../../data/projects";
 
 export const Projects = () => {
-  
-  const visibleProjects = projects.slice(0, 4);
+  const visibleProjects = projects.slice(0, 6);
 
   return (
     <section
@@ -101,14 +87,14 @@ export const Projects = () => {
           style={{
             display: "grid",
             gridTemplateColumns:
-              "repeat(4, minmax(0, 1fr))",
+              "repeat(3, minmax(0, 1fr))",
             gap: "24px",
           }}
         >
-          {visibleProjects.map((project, index) => (
+          {visibleProjects.map((project) => (
             <div
               className="project-card"
-              key={index}
+              key={project.id}
               style={{
                 position: "relative",
                 overflow: "hidden",
@@ -118,8 +104,8 @@ export const Projects = () => {
               }}
             >
               <img
-                src={project}
-                alt={`Proyecto ${index + 1}`}
+                src={project.image}
+                alt={project.title}
                 style={{
                   width: "100%",
                   height: "100%",
@@ -151,16 +137,17 @@ export const Projects = () => {
                     fontWeight: 600,
                   }}
                 >
-                  Proyecto {index + 1}
+                  {project.title}
                 </h3>
 
                 <p
                   style={{
                     opacity: 0.8,
                     marginTop: "6px",
+                    textTransform: "capitalize",
                   }}
                 >
-                  Aberturas de aluminio
+                  {project.category}
                 </p>
               </div>
             </div>

@@ -31,135 +31,203 @@ import a22 from "../assets/mapara2.webp";
 
 import a23 from "../assets/casa.webp";
 import a24 from "../assets/casa2.webp";
+import a39 from "../assets/casa3.webp";
 
 import a25 from "../assets/cochera.webp";
 
 import a26 from "../assets/bano.webp";
+import a27 from "../assets/bano2.webp";
 
-import a27 from "../assets/quinchoA.webp";
-import a28 from "../assets/QuinchoA1.webp";
+import a28 from "../assets/quinchoA.webp";
+import a29 from "../assets/QuinchoA1.webp";
+import a30 from "../assets/QuinchoA2.webp";
+
+import a31 from "../assets/cerramientoNegro.webp";
+import a32 from "../assets/cerramientoNegro2.webp";
 
 
+import a33 from "../assets/PuertaSimpleNegra.webp";
+import a34 from "../assets/PuertaDobleNegra.webp";
+import a35 from "../assets/ventanaAluminioNegra.webp";
+
+import a36 from "../assets/quinchoGrande.webp";
+import a37 from "../assets/quinchoGrande2.webp";
+import a38 from "../assets/quinchoGrande3.webp";
 
 export const projects = [
   {
     id: 1,
-    title: "Frente vidriado para oficina",
+    title: "Cerramiento Integral para Oficina",
     category: "Cerramientos",
 
     description:
-      "Cerramiento integral con perfilería de aluminio y amplias superficies vidriadas para espacios corporativos.",
+      "Estructura de aluminio y vidrio diseñada para brindar amplitud visual, iluminación natural y una terminación moderna para espacios comerciales.",
 
     images: [a1, a2, a3],
   },
 
   {
     id: 2,
-    title: "Puerta institucional de aluminio",
+    title: "Acceso Institucional de Aluminio",
     category: "Puertas",
 
     description:
-      "Puerta de aluminio reforzada con diseño moderno y excelente resistencia para accesos de alto tránsito.",
+      "Puerta de aluminio y vidrio instalada en edificio institucional, combinando seguridad, resistencia y diseño.",
 
     images: [a4, a5],
   },
 
   {
     id: 3,
-    title: "Puerta simple de aluminio",
+    title: "Puerta Corrediza de Aluminio",
     category: "Puertas",
 
     description:
-      "Puerta fabricada a medida con perfilería de aluminio y terminaciones de alta calidad.",
+      "Sistema corredizo fabricado a medida para optimizar espacios y mejorar la iluminación interior.",
 
     images: [a6, a7, a8],
   },
 
   {
     id: 4,
-    title: "Puerta doble hoja de aluminio",
+    title: "Puerta Doble Vidriada",
     category: "Puertas",
 
     description:
-      "Sistema de doble apertura ideal para accesos amplios, combinando funcionalidad y estética.",
+      "Puerta de doble hoja realizada en aluminio con amplias superficies vidriadas y excelente terminación.",
 
     images: [a9, a10, a11],
   },
 
   {
     id: 5,
-    title: "Frente comercial vidriado",
+    title: "Cerramiento Comercial",
     category: "Cerramientos",
 
     description:
-      "Cerramiento para local comercial con estructura de aluminio y amplias visuales hacia el exterior.",
+      "Frente vidriado para local comercial con perfiles de aluminio y diseño pensado para maximizar la visibilidad.",
 
     images: [a12, a13],
   },
 
   {
     id: 6,
-    title: "Quincho con cerramiento vidriado",
+    title: "Quincho Vidriado",
     category: "Quinchos",
 
     description:
-      "Espacio cerrado con aluminio y vidrio diseñado para disfrutar durante todo el año.",
+      "Cerramiento completo para quincho con amplias vistas y excelente aprovechamiento de la luz natural.",
 
     images: [a14, a15, a16],
   },
 
   {
     id: 7,
-    title: "Quincho aluminio negro",
+    title: "Quincho Negro Moderno",
     category: "Quinchos",
 
     description:
-      "Cerramiento premium en aluminio negro con estética moderna y excelente ingreso de luz natural.",
+      "Proyecto realizado con perfilería negra y grandes paños vidriados para lograr un estilo contemporáneo.",
 
     images: [a17, a18],
   },
 
   {
     id: 8,
-    title: "Aberturas para quincho",
-    category: "Aberturas",
+    title: "Aberturas para Quincho",
+    category: "Quinchos",
 
     description:
-      "Instalación de aberturas corredizas de aluminio para maximizar iluminación y ventilación.",
+      "Sistema de aberturas de aluminio diseñado para integrar espacios interiores y exteriores.",
 
     images: [a19, a20],
   },
 
   {
     id: 9,
-    title: "Mampara de baño a medida",
+    title: "Mampara de Baño Corrediza",
     category: "Mamparas",
 
     description:
-      "Mampara fabricada a medida con perfilería de aluminio y vidrio de seguridad.",
+      "Mampara fabricada a medida con perfilería de aluminio y vidrio para baños modernos.",
 
     images: [a21, a22],
   },
 
   {
     id: 10,
-    title: "Aberturas residenciales",
-    category: "Aberturas",
+    title: "Aberturas Residenciales",
+    category: "Ventanas",
 
     description:
-      "Conjunto de ventanas y puertas de aluminio diseñadas para viviendas modernas.",
+      "Instalación de ventanas y puertas de aluminio para vivienda familiar con terminaciones de alta calidad.",
 
-    images: [a23, a24],
+    images: [a23, a24, a39],
   },
 
   {
     id: 11,
-    title: "Cerramiento para cochera",
+    title: "Cerramiento para Cochera",
     category: "Cerramientos",
 
     description:
-      "Solución de cerramiento resistente y funcional para proteger vehículos y ampliar espacios cubiertos.",
+      "Solución de cerramiento en aluminio para protección y aprovechamiento de espacios exteriores.",
 
     images: [a25],
+  },
+
+  {
+    id: 12,
+    title: "Mampara para Baño Moderno",
+    category: "Mamparas",
+
+    description:
+      "Mampara de vidrio y aluminio realizada a medida para lograr funcionalidad y diseño.",
+
+    images: [a26, a27],
+  },
+
+  {
+    id: 13,
+    title: "Quincho Familiar",
+    category: "Quinchos",
+
+    description:
+      "Proyecto de cerramiento integral para quincho pensado para disfrutar durante todo el año.",
+
+    images: [a28, a29, a30],
+  },
+
+  {
+    id: 14,
+    title: "Cerramiento Negro Premium",
+    category: "Cerramientos",
+
+    description:
+      "Estructura de aluminio negro con amplias superficies vidriadas y estética minimalista.",
+
+    images: [a31, a32],
+  },
+
+  {
+    id: 15,
+    title: "Puerta y Ventanas Línea Negra",
+    category: "Ventanas",
+
+    description:
+      "Conjunto de puerta y ventanas de aluminio negro fabricadas a medida para vivienda moderna.",
+
+    images: [a33, a34, a35],
+  },
+
+  {
+    id: 16,
+    title: "Quincho Panorámico",
+    category: "Quinchos",
+
+    description:
+      "Gran cerramiento vidriado para quincho con vistas abiertas y excelente iluminación.",
+
+    images: [a36, a37, a38],
   },
 ];

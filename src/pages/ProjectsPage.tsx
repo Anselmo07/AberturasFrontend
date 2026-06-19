@@ -16,12 +16,12 @@ export const ProjectsPage = () => {
 
   const categories = [
   "Todos",
-  "Aberturas",
-  "Puertas",
-  "Cerramientos",
   "Quinchos",
+  "Puertas",
+  "Ventanas",
   "Mamparas",
-];
+  "Cerramientos",
+  ];
 
   const filteredProjects =
     selectedCategory === "Todos"
