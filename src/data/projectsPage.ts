@@ -4,6 +4,7 @@ import a3 from "../assets/oficina3.webp";
 
 import a4 from "../assets/puertaPolicia.webp";
 import a5 from "../assets/puertaPolicia2.webp";
+import a40 from "../assets/puertaPolicia3.webp";
 
 import a6 from "../assets/PuertaAluminioSimple.webp";
 import a7 from "../assets/PuertaAluminioSimple2.webp";
@@ -12,6 +13,7 @@ import a8 from "../assets/PuertaAluminioSimple3.webp";
 import a9 from "../assets/PuertaAluminioDoble.webp";
 import a10 from "../assets/PuertaAluminioDoble2.webp";
 import a11 from "../assets/PuertaAluminioDoble3.webp";
+import a41 from "../assets/puertaDobleBaja.webp";
 
 import a12 from "../assets/cerramientoLocal.webp";
 import a13 from "../assets/cerramientoLocal2.webp";
@@ -74,7 +76,7 @@ export const projects = [
     description:
       "Puerta de aluminio y vidrio instalada en edificio institucional, combinando seguridad, resistencia y diseño.",
 
-    images: [a4, a5],
+    images: [a4, a5, a40],
   },
 
   {
@@ -96,7 +98,7 @@ export const projects = [
     description:
       "Puerta de doble hoja realizada en aluminio con amplias superficies vidriadas y excelente terminación.",
 
-    images: [a9, a10, a11],
+    images: [a9, a10, a11, a41],
   },
 
   {

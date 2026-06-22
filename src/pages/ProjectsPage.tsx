@@ -2,8 +2,6 @@ import { useState } from "react";
 
 import { projects } from "../data/projectsPage";
 
-// import { WHATSAPP_URL } from "../components/ui/buttonContact";
-
 export const ProjectsPage = () => {
   const [selectedCategory, setSelectedCategory] =
     useState("Todos");
@@ -185,8 +183,8 @@ ${project.description}`;
                 alt={project.title}
                 style={{
                   width: "100%",
-                  height: "320px",
-                  objectFit: "cover",
+                  height: "380px",
+                  objectFit: "cover"
                 }}
               />
 
@@ -278,7 +276,7 @@ ${project.description}`;
                 className="project-modal-main-image"
                 style={{
                   width: "100%",
-                  height: "520px",
+                  height: "640px",
                   objectFit: "cover",
                   borderRadius: "16px",
                 }}

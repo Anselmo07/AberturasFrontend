@@ -2,8 +2,13 @@ import { Link } from "react-router-dom";
 
 import { projects } from "../../data/projects";
 
+import { useState } from "react";
+
 export const Projects = () => {
-  const visibleProjects = projects.slice(0, 6);
+  const visibleProjects = projects.slice(0, 4);
+
+  const [selectedProject, setSelectedProject] =
+  useState<any>(null);
 
   return (
     <section
@@ -87,7 +92,7 @@ export const Projects = () => {
           style={{
             display: "grid",
             gridTemplateColumns:
-              "repeat(3, minmax(0, 1fr))",
+              "repeat(4, minmax(0, 1fr))",
             gap: "24px",
           }}
         >
@@ -95,6 +100,7 @@ export const Projects = () => {
             <div
               className="project-card"
               key={project.id}
+              onClick={() => setSelectedProject(project)}
               style={{
                 position: "relative",
                 overflow: "hidden",
@@ -154,6 +160,98 @@ export const Projects = () => {
           ))}
         </div>
       </div>
+      {selectedProject && (
+        <div
+          onClick={() => setSelectedProject(null)}
+          style={{
+            position: "fixed",
+            inset: 0,
+            background: "rgba(0,0,0,.75)",
+            zIndex: 9999,
+
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+
+            padding: "20px",
+          }}
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              background: "#fff",
+              width: "100%",
+              maxWidth: "900px",
+              borderRadius: "24px",
+              overflow: "hidden",
+            }}
+          >
+            <img
+              src={selectedProject.image}
+              alt={selectedProject.title}
+              style={{
+                width: "100%",
+                height: "580px",
+                objectFit: "cover",
+              }}
+            />
+
+            <div
+              style={{
+                padding: "30px",
+              }}
+            >
+              <span
+                style={{
+                  color: "#C9A14A",
+                  fontWeight: 600,
+                }}
+              >
+                {selectedProject.category}
+              </span>
+
+              <h2
+                style={{
+                  marginTop: "12px",
+                  fontSize: "34px",
+                  color: "#111827",
+                }}
+              >
+                {selectedProject.title}
+              </h2>
+
+              <p
+                style={{
+                  marginTop: "20px",
+                  color: "#6B7280",
+                  lineHeight: "1.8",
+                }}
+              >
+                {selectedProject.description}
+              </p>
+
+              <Link
+                to="/proyectos"
+                style={{
+                  display: "inline-block",
+                  marginTop: "30px",
+
+                  background: "#C9A14A",
+                  color: "#111",
+
+                  padding: "14px 24px",
+                  borderRadius: "12px",
+
+                  textDecoration: "none",
+                  fontWeight: 600,
+                }}
+              >
+                Ver proyecto completo
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
