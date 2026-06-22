@@ -42,10 +42,10 @@ import a27 from "../assets/bano2.webp";
 
 import a28 from "../assets/quinchoA.webp";
 import a29 from "../assets/QuinchoA1.webp";
-import a30 from "../assets/QuinchoA2.webp";
+import a30 from "../assets/quinchoA2.webp";
 
 import a31 from "../assets/cerramientoNegro.webp";
-import a32 from "../assets/cerramientoNegro2.webp";
+import a32 from "../assets/CerramientoNegro2.webp";
 
 
 import a33 from "../assets/PuertaSimpleNegra.webp";
