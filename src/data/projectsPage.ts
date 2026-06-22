@@ -7,7 +7,7 @@ import a5 from "../assets/puertaPolicia2.webp";
 import a40 from "../assets/puertaPolicia3.webp";
 
 import a6 from "../assets/PuertaAluminioSimple.webp";
-import a7 from "../assets/PuertaAluminioSimple2.webp";
+import a7 from "../assets/puertaAluminioSimple2.webp";
 import a8 from "../assets/PuertaAluminioSimple3.webp";
 
 import a9 from "../assets/PuertaAluminioDoble.webp";
