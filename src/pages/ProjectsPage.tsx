@@ -221,9 +221,14 @@ ${project.description}`;
         </div>
       </section>
 
+
+         
+
+
       {/* Modal */}
 
       {selectedProject && (
+        
         <div
           onClick={() =>
             setSelectedProject(null)
@@ -242,6 +247,7 @@ ${project.description}`;
             padding: "30px",
           }}
         >
+          
           <div
             onClick={(e) =>
               e.stopPropagation()
@@ -259,9 +265,38 @@ ${project.description}`;
                 "1.1fr 0.9fr",
             }}
           >
+            <div className="project-modal-close">
+        <button
+  onClick={() => setSelectedProject(null)}
+  style={{
+    display: "flex",
+    alignItems: "center",
+    gap: "10px",
+
+    background: "#111827",
+    color: "white",
+
+    border: "none",
+
+    padding: "12px 20px",
+
+    borderRadius: "999px",
+
+    cursor: "pointer",
+
+    fontWeight: 600,
+
+    boxShadow:
+      "0 10px 25px rgba(17,24,39,.25)",
+  }}
+>
+  ← Atrás
+</button>
+      </div> 
             {/* Galería */}
 
             <div
+              className="project-modal-gallery-section"
               style={{
                 padding: "30px",
               }}
@@ -345,6 +380,7 @@ ${project.description}`;
               </span>
 
               <h2
+                className="project-modal-title"
                 style={{
                   marginTop: "14px",
                   fontSize: "42px",

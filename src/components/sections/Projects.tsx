@@ -178,6 +178,7 @@ export const Projects = () => {
         >
           <div
             onClick={(e) => e.stopPropagation()}
+            className="project-home-modal"
             style={{
               background: "#fff",
               width: "100%",
@@ -186,9 +187,44 @@ export const Projects = () => {
               overflow: "hidden",
             }}
           >
+            <div
+  style={{
+    padding: "20px 20px 0",
+  }}
+>
+  <button
+    onClick={() => setSelectedProject(null)}
+    className="project-home-modal-back"
+    style={{
+      display: "flex",
+      alignItems: "center",
+      gap: "8px",
+
+      border: "none",
+      background: "#f8f8f8",
+
+      color: "#111827",
+
+      padding: "12px 18px",
+      borderRadius: "999px",
+
+      cursor: "pointer",
+      fontWeight: 600,
+      fontSize: "14px",
+
+      boxShadow:
+        "0 4px 12px rgba(0,0,0,.06)",
+
+      transition: ".3s",
+    }}
+  >
+    ← Volver
+  </button>
+</div>
             <img
               src={selectedProject.image}
               alt={selectedProject.title}
+              className="project-home-modal-image"
               style={{
                 width: "100%",
                 height: "580px",
@@ -197,6 +233,7 @@ export const Projects = () => {
             />
 
             <div
+              className="project-home-modal-content"
               style={{
                 padding: "30px",
               }}
@@ -211,6 +248,7 @@ export const Projects = () => {
               </span>
 
               <h2
+              className="project-home-modal-title"
                 style={{
                   marginTop: "12px",
                   fontSize: "34px",
@@ -253,5 +291,6 @@ export const Projects = () => {
         </div>
       )}
     </section>
+    
   );
 };
