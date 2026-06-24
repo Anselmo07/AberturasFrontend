@@ -13,6 +13,7 @@ export const Projects = () => {
   return (
     <section
       id="trabajos"
+      className="section-anchor"
       style={{
         background: "#ffffff",
         padding: "120px 0",

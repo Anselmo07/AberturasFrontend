@@ -41,6 +41,7 @@ ${project.description}`;
 
   return (
     <main
+      className="section-anchor"
       style={{
         paddingTop: "140px",
         background: "#faf8f4",

@@ -9,6 +9,7 @@ import {
 export const About = () => {
   return (
     <section
+      className="section-anchor"
       id="nosotros"
       style={{
         background: "#ffffff",

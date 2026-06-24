@@ -3,6 +3,8 @@ import { WHATSAPP_URL } from "../ui/buttonContact";
 export const CTA = () => {
   return (
     <section
+      id="contacto"
+      className="section-anchor"
       style={{
         background: "#111111",
         padding: "100px 0",

@@ -8,7 +8,7 @@ import {
 export const Footer = () => {
   return (
     <footer
-      id="contacto"
+      className="section-anchor"
       style={{
           background: "#111",
           color: "#fff",

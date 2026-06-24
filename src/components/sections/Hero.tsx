@@ -6,6 +6,7 @@ export const Hero = () => {
   return (
     <section
       id="inicio"
+      
       className="relative h-screen min-h-[850px]"
     >
       <img

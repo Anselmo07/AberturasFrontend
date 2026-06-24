@@ -2,6 +2,10 @@
    NAVBAR
 ========================= */
 
+.section-anchor {
+  scroll-margin-top: 20px;
+}
+
 .navbar-mobile-btn {
   display: none;
 }

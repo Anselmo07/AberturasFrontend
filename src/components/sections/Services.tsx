@@ -4,6 +4,7 @@ export const Services = () => {
   return (
     <section
       id="productos"
+      className="section-anchor"
       style={{
         background: "#faf8f4",
         padding: "100px 0",
@@ -82,8 +83,7 @@ export const Services = () => {
                   fontSize: "18px",
                   fontWeight: 700,
                   color: "#111827",
-                  marginBottom: "10px",
-                  minHeight: "50px",
+                  marginBottom: "3%",
                 }}
               >
                 {service.title}
@@ -95,7 +95,7 @@ export const Services = () => {
                   fontSize: "14px",
                   lineHeight: "1.7",
                   maxWidth: "220px",
-                  margin: "0 auto",
+                  margin: "0 auto 10% auto",
                 }}
               >
                 {service.description}

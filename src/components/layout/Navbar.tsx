@@ -8,6 +8,7 @@ import { WHATSAPP_URL } from "../ui/buttonContact";
 export const Navbar = () => {
 
   const [menuOpen, setMenuOpen] = useState(false);
+  const closeMenu = () => setMenuOpen(false);
 
   return (
     <header
@@ -104,11 +105,11 @@ export const Navbar = () => {
               color: "white",
             }}
           >
-            <li><a href="/#inicio">Inicio</a></li>
-            <li><a href="/#nosotros">Nosotros</a></li>
-            <li><a href="/#productos">Productos</a></li>
-            <li><a href="/#trabajos">Trabajos</a></li>
-            <li><a href="/#contacto">Contacto</a></li>
+            <li><a href="/#inicio" onClick={closeMenu}>Inicio</a></li>
+            <li><a href="/#nosotros" onClick={closeMenu}>Nosotros</a></li>
+            <li><a href="/#productos" onClick={closeMenu}>Productos</a></li>
+            <li><a href="/#trabajos" onClick={closeMenu}>Trabajos</a></li>
+            <li><a href="/#contacto" onClick={closeMenu}>Contacto</a></li>
           </ul>
 
           <div
@@ -138,17 +139,32 @@ export const Navbar = () => {
 
         {menuOpen && (
           <div className="mobile-menu">
-            <a href="#inicio">Inicio</a>
-            <a href="#nosotros">Nosotros</a>
-            <a href="#productos">Productos</a>
-            <a href="#trabajos">Trabajos</a>
-            <a href="#contacto">Contacto</a>
+            <a href="/#inicio" onClick={closeMenu}>
+              Inicio
+            </a>
+
+            <a href="/#nosotros" onClick={closeMenu}>
+              Nosotros
+            </a>
+
+            <a href="/#productos" onClick={closeMenu}>
+              Productos
+            </a>
+
+            <a href="/#trabajos" onClick={closeMenu}>
+              Trabajos
+            </a>
+
+            <a href="/#contacto" onClick={closeMenu}>
+              Contacto
+            </a>
 
             <a
               href={WHATSAPP_URL}
               target="_blank"
               rel="noreferrer"
               className="mobile-budget-btn"
+              onClick={closeMenu}
             >
               Solicitar Presupuesto
             </a>
