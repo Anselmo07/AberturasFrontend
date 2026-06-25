@@ -228,7 +228,7 @@ export const Projects = () => {
               className="project-home-modal-image"
               style={{
                 width: "100%",
-                height: "580px",
+                height: "520px",
                 objectFit: "cover",
               }}
             />

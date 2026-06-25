@@ -228,45 +228,42 @@ ${project.description}`;
 
       {/* Modal */}
 
-      {selectedProject && (
-        
-        <div
-          onClick={() =>
-            setSelectedProject(null)
-          }
-          style={{
-            position: "fixed",
-            inset: 0,
-            background:
-              "rgba(0,0,0,.75)",
-            zIndex: 9999,
+{selectedProject && (
+  <div
+    onClick={() => setSelectedProject(null)}
+    style={{
+      position: "fixed",
+      inset: 0,
+      background: "rgba(0,0,0,.75)",
+      zIndex: 9999,
 
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
 
-            padding: "30px",
-          }}
-        >
-          
-          <div
-            onClick={(e) =>
-              e.stopPropagation()
-            }
-            className="project-modal"
-            style={{
-              background: "#fff",
-              width: "100%",
-              maxWidth: "1300px",
-              borderRadius: "24px",
-              overflow: "hidden",
+      padding: "30px",
+    }}
+  >
+    <div
+      onClick={(e) => e.stopPropagation()}
+      style={{
+        background: "#fff",
+        width: "100%",
+        maxWidth: "1300px",
+        borderRadius: "24px",
+        overflow: "hidden",
+      }}
+    >
+      {/* Header */}
 
-              display: "grid",
-              gridTemplateColumns:
-                "1.1fr 0.9fr",
-            }}
-          >
-            <div className="project-modal-close">
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          padding: "24px 30px",
+          borderBottom: "1px solid #ececec",
+        }}
+      >
         <button
   onClick={() => setSelectedProject(null)}
   style={{
@@ -275,157 +272,164 @@ ${project.description}`;
     gap: "10px",
 
     background: "#111827",
-    color: "white",
+    color: "#fff",
 
     border: "none",
-
-    padding: "12px 20px",
-
     borderRadius: "999px",
+
+    padding: "12px 22px",
 
     cursor: "pointer",
 
     fontWeight: 600,
+    fontSize: "15px",
 
-    boxShadow:
-      "0 10px 25px rgba(17,24,39,.25)",
+    boxShadow: "0 10px 25px rgba(17,24,39,.25)",
+
+    transition: "all .25s ease",
+  }}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.transform = "translateX(-4px)";
+    e.currentTarget.style.boxShadow =
+      "0 16px 35px rgba(17,24,39,.35)";
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.transform = "translateX(0)";
+    e.currentTarget.style.boxShadow =
+      "0 10px 25px rgba(17,24,39,.25)";
   }}
 >
-  ← Atrás
+  <span style={{ fontSize: "18px" }}>←</span>
+  Atrás
 </button>
-      </div> 
-            {/* Galería */}
+      </div>
 
-            <div
-              className="project-modal-gallery-section"
-              style={{
-                padding: "30px",
-              }}
-            >
-              <img
-                src={
-                  selectedProject.images[
-                    selectedImage
-                  ]
-                }
-                alt=""
-                className="project-modal-main-image"
-                style={{
-                  width: "100%",
-                  height: "640px",
-                  objectFit: "cover",
-                  borderRadius: "16px",
-                }}
-              />
+      {/* Contenido */}
 
-              <div
-                style={{
-                  display: "flex",
-                  gap: "12px",
-                  marginTop: "16px",
-                  overflowX: "auto",
-                }}
-              >
-                {selectedProject.images.map(
-                  (
-                    image: string,
-                    index: number
-                  ) => (
-                    <img
-                      key={index}
-                      src={image}
-                      alt=""
-                      onClick={() =>
-                        setSelectedImage(
-                          index
-                        )
-                      }
-                      className="project-modal-gallery"
-                      style={{
-                        width: "100px",
-                        height: "80px",
-                        objectFit: "cover",
-                        borderRadius: "10px",
-                        cursor: "pointer",
-                        border:
-                          selectedImage ===
-                          index
-                            ? "3px solid #C9A14A"
-                            : "2px solid transparent",
-                      }}
-                    />
-                  )
-                )}
-              </div>
-            </div>
+      <div
+        className="project-modal"
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1.1fr 0.9fr",
+        }}
+      >
+        {/* Galería */}
 
-            {/* Información */}
+        <div
+          className="project-modal-gallery-section"
+          style={{
+            padding: "30px",
+          }}
+        >
+          <img
+            src={selectedProject.images[selectedImage]}
+            alt={selectedProject.title}
+            className="project-modal-main-image"
+            style={{
+              width: "100%",
+              height: "640px",
+              objectFit: "cover",
+              borderRadius: "16px",
+            }}
+          />
 
-            <div
-              className="project-modal-info"
-              style={{
-                padding: "40px",
-                borderLeft:
-                  "1px solid #eee",
-              }}
-            >
-              <span
-                style={{
-                  color: "#C9A14A",
-                  fontWeight: 600,
-                  textTransform:
-                    "uppercase",
-                }}
-              >
-                {selectedProject.category}
-              </span>
-
-              <h2
-                className="project-modal-title"
-                style={{
-                  marginTop: "14px",
-                  fontSize: "42px",
-                  color: "#111827",
-                }}
-              >
-                {selectedProject.title}
-              </h2>
-
-              <p
-                style={{
-                  marginTop: "24px",
-                  color: "#6B7280",
-                  lineHeight: "1.9",
-                  fontSize: "17px",
-                }}
-              >
-                {
-                  selectedProject.description
-                }
-              </p>
-
-              <a
-                href={getWhatsappUrl(selectedProject)}
-                target="_blank"
-                rel="noreferrer"
-                style={{
-                  display: "inline-block",
-                  marginTop: "40px",
-                  background: "#C9A14A",
-                  color: "#111",
-                  padding:
-                    "18px 32px",
-                  borderRadius: "12px",
-                  fontWeight: 700,
-                  textDecoration: "none",
-                }}
-              >
-                Solicitar presupuesto
-              </a>
-            </div>
+          <div
+            style={{
+              display: "flex",
+              gap: "12px",
+              marginTop: "16px",
+              overflowX: "auto",
+            }}
+          >
+            {selectedProject.images.map(
+              (image: string, index: number) => (
+                <img
+                  key={index}
+                  src={image}
+                  alt=""
+                  onClick={() => setSelectedImage(index)}
+                  className="project-modal-gallery"
+                  style={{
+                    width: "100px",
+                    height: "80px",
+                    objectFit: "cover",
+                    borderRadius: "10px",
+                    cursor: "pointer",
+                    border:
+                      selectedImage === index
+                        ? "3px solid #C9A14A"
+                        : "2px solid transparent",
+                  }}
+                />
+              )
+            )}
           </div>
         </div>
-      )}
+
+        {/* Información */}
+
+        <div
+          className="project-modal-info"
+          style={{
+            padding: "40px",
+            borderLeft: "1px solid #eee",
+          }}
+        >
+          <span
+            style={{
+              color: "#C9A14A",
+              fontWeight: 600,
+              textTransform: "uppercase",
+            }}
+          >
+            {selectedProject.category}
+          </span>
+
+          <h2
+            className="project-modal-title"
+            style={{
+              marginTop: "14px",
+              fontSize: "42px",
+              color: "#111827",
+            }}
+          >
+            {selectedProject.title}
+          </h2>
+
+          <p
+            style={{
+              marginTop: "24px",
+              color: "#6B7280",
+              lineHeight: "1.9",
+              fontSize: "17px",
+            }}
+          >
+            {selectedProject.description}
+          </p>
+
+          <a
+            href={getWhatsappUrl(selectedProject)}
+            target="_blank"
+            rel="noreferrer"
+            style={{
+              display: "inline-block",
+              marginTop: "40px",
+              background: "#C9A14A",
+              color: "#111",
+              padding: "18px 32px",
+              borderRadius: "12px",
+              fontWeight: 700,
+              textDecoration: "none",
+            }}
+          >
+            Solicitar presupuesto
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+)}
+
     </main>
   );
 };
