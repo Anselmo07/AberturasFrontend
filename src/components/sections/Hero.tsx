@@ -56,16 +56,14 @@ export const Hero = () => {
             style={{
               marginTop: "20px",
               fontSize: "84px",
-              lineHeight: "0.95",
+              lineHeight: "0.9",
               fontWeight: 800,
               color: "#fff",
             }}
           >
-            Aberturas y
+            INNOVA
             <br />
-            cerramientos
-            <br />
-            de aluminio
+            ABERTURAS
           </h1>
 
           <p

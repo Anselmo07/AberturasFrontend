@@ -5,6 +5,8 @@ import { useState } from "react";
 
 import { WHATSAPP_URL } from "../ui/buttonContact";
 
+import InnovaLogo from "../../assets/InnovaLogo.png"
+
 export const Navbar = () => {
 
   const [menuOpen, setMenuOpen] = useState(false);
@@ -44,19 +46,25 @@ export const Navbar = () => {
             }}
           >
             <div
-              style={{
-                width: "52px",
-                height: "52px",
-                border: "1px solid #C9A14A",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                color: "#C9A14A",
-                fontWeight: 700,
-              }}
-            >
-              A
-            </div>
+  style={{
+    width: "108px",
+    height: "108px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    flexShrink: 0,
+  }}
+>
+  <img
+    src={InnovaLogo}
+    alt="Innova Aberturas"
+    style={{
+      width: "100%",
+      height: "100%",
+      objectFit: "contain",
+    }}
+  />
+</div>
 
             <div>
               <h2

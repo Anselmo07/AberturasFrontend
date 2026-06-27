@@ -257,6 +257,7 @@ ${project.description}`;
       {/* Header */}
 
       <div
+        className="page-button-close"
         style={{
           display: "flex",
           alignItems: "center",

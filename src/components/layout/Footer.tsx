@@ -151,7 +151,8 @@ export const Footer = () => {
                 Seguinos
               </span>
 
-              <p>@aberturas.aluminio</p>
+              <a href="https://www.instagram.com/innovaaberturas/">@innovaaberturas
+</a>
             </div>
           </div>
         </div>
