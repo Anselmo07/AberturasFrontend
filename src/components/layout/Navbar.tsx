@@ -5,7 +5,7 @@ import { useState } from "react";
 
 import { WHATSAPP_URL } from "../ui/buttonContact";
 
-import InnovaLogo from "../../assets/InnovaLogo.png"
+import InnovaLogo from "../../assets/InnovaLogo.webp"
 
 export const Navbar = () => {
 

@@ -1,9 +1,9 @@
-import quincho from "../assets/quinchos.png";
-import mampara from "../assets/maparas.png";
-import roller from "../assets/roller.png";
-import puerta from "../assets/puertaPegable.jpg";
-import techo from "../assets/techos.jpg";
-import pvc from "../assets/cielorrasos.jpg";
+import quincho from "../assets/quinchos.webp";
+import mampara from "../assets/maparas.webp";
+import roller from "../assets/roller.webp";
+import puerta from "../assets/puertaPegable.webp";
+import techo from "../assets/techos.webp";
+import pvc from "../assets/cielorrasos.webp";
 
 export const services = [
   {

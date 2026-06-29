@@ -1,4 +1,4 @@
-import heroImage from "../../assets/p1.jpg";
+import heroImage from "../../assets/p1.webp";
 
 import { WHATSAPP_URL } from "../ui/buttonContact";
 
