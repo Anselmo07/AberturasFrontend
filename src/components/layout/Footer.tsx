@@ -120,7 +120,7 @@ export const Footer = () => {
                 Ubicación
               </span>
 
-              <p>Eatado De Israel 222, Parana</p>
+              <p>Estado De Israel 222, Paraná</p>
             </div>
           </div>
 
