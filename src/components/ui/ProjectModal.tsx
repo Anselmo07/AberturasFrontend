@@ -64,6 +64,7 @@ export const ProjectModal = ({
         </button>
 
         <img
+          loading="lazy"
           src={project.image}
           alt={project.title}
           style={{

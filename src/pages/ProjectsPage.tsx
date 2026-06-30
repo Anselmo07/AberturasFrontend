@@ -180,6 +180,7 @@ ${project.description}`;
               }}
             >
               <img
+                loading="lazy"
                 src={project.images[0]}
                 alt={project.title}
                 style={{
@@ -323,6 +324,7 @@ ${project.description}`;
           }}
         >
           <img
+            loading="lazy"
             src={selectedProject.images[selectedImage]}
             alt={selectedProject.title}
             className="project-modal-main-image"
@@ -345,6 +347,7 @@ ${project.description}`;
             {selectedProject.images.map(
               (image: string, index: number) => (
                 <img
+                  loading="lazy"
                   key={index}
                   src={image}
                   alt=""

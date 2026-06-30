@@ -67,6 +67,7 @@ export const Services = () => {
               }}
             >
               <img
+                loading="lazy"
                 src={service.image}
                 alt={service.title}
                 style={{

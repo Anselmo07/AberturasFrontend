@@ -111,6 +111,7 @@ export const Projects = () => {
               }}
             >
               <img
+                loading="lazy"
                 src={project.image}
                 alt={project.title}
                 style={{
@@ -223,6 +224,7 @@ export const Projects = () => {
   </button>
 </div>
             <img
+              loading="lazy"
               src={selectedProject.image}
               alt={selectedProject.title}
               className="project-home-modal-image"
