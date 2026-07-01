@@ -222,7 +222,8 @@ export const Projects = () => {
   >
     ← Volver
   </button>
-</div>
+</div >
+          <div className="project-home-modal-body">
             <img
               loading="lazy"
               src={selectedProject.image}
@@ -262,6 +263,7 @@ export const Projects = () => {
               </h2>
 
               <p
+                className="project-home-modal-description"
                 style={{
                   marginTop: "20px",
                   color: "#6B7280",
@@ -289,6 +291,7 @@ export const Projects = () => {
               >
                 Ver proyecto completo
               </Link>
+            </div>
             </div>
           </div>
         </div>
